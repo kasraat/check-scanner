@@ -13,7 +13,7 @@ RUN  apt-get update -qqy \
      libsasl2-dev \
      libsasl2-modules \
      make \
-     python \
+     python-is-python3 \
      nodejs npm ca-certificates \
   && rm -rf /var/cache/apt/* /var/lib/apt/lists/*
 
