@@ -29,7 +29,8 @@ if (process.platform === "darwin") {
 var driver_options = {
   'metadata.broker.list': eventStreamsCredentials.kafka_brokers_sasl.join(','),
   //'security.protocol': 'sasl_ssl',
-  'security.protocol': 'plaintext',
+  //'security.protocol': 'plaintext',
+  'security.protocol': 'sasl_plaintext',
   'ssl.ca.location': process.env.CA_LOCATION || ca_location,
   'sasl.mechanisms': 'PLAIN',
   'sasl.username': 'token',
