@@ -27,9 +27,9 @@ if (process.platform === "darwin") {
 
 // Config options common to all clients
 var driver_options = {
-  //'metadata.broker.list': eventStreamsCredentials.kafka_brokers_sasl.join(','),
-  'metadata.broker.list': eventStreamsCredentials.kafka_http_url,
-  //'security.protocol': 'sasl_ssl',
+  'metadata.broker.list': eventStreamsCredentials.kafka_brokers_sasl.join(','),
+  //'metadata.broker.list': eventStreamsCredentials.kafka_http_url,
+  'security.protocol': 'sasl_ssl',
   //'security.protocol': 'plaintext',
   //'security.protocol': 'sasl_plaintext',
   'ssl.ca.location': process.env.CA_LOCATION || ca_location,
@@ -39,7 +39,7 @@ var driver_options = {
   'sasl.password': eventStreamsCredentials.api_key,
   //'broker.version.fallback': '0.10.0',  // still needed with librdkafka 0.11.6 to avoid fallback to 0.9.0
   'log.connection.close': false,
-  'sasl.jaas.config': 'org.apache.kafka.common.security.plain.PlainLoginModule required username="token" password="hXe076FKfgUQYuCu9EQc8N7fswbzz6XvqIqfKcozpKER"',
+  //'sasl.jaas.config': 'org.apache.kafka.common.security.plain.PlainLoginModule required username="token" password="hXe076FKfgUQYuCu9EQc8N7fswbzz6XvqIqfKcozpKER"',
   'security.protocol': 'SASL_SSL',
   'sasl.mechanism': 'PLAIN',
   'ssl.protocol': 'TLSv1.2',
