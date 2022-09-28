@@ -38,12 +38,12 @@ var driver_options = {
   'sasl.password': eventStreamsCredentials.api_key,
   'broker.version.fallback': '0.10.0',  // still needed with librdkafka 0.11.6 to avoid fallback to 0.9.0
   'log.connection.close': false,
-  
+  //'sasl.jaas.config': 'org.apache.kafka.common.security.plain.PlainLoginModule required username="token" password="hXe076FKfgUQYuCu9EQc8N7fswbzz6XvqIqfKcozpKER"',
   // 'security.protocol': 'SASL_SSL',
-  'ssl.protocol': 'TLSv1.2',
-  'ssl.enabled.protocols': 'TLSv1.2',
-  'ssl.endpoint.identification.algorithm': 'HTTPS',
-   'sasl.jaas.config': 'org.apache.kafka.common.security.plain.PlainLoginModule required username="token" password="hXe076FKfgUQYuCu9EQc8N7fswbzz6XvqIqfKcozpKER"'
+  // 'sasl.mechanism': 'PLAIN',
+  // 'ssl.protocol': 'TLSv1.2',
+  // 'ssl.enabled.protocols': 'TLSv1.2',
+  // 'ssl.endpoint.identification.algorithm': 'HTTPS'
 };
 var consumer_opts = {
   'client.id': 'pubsub-consumer',
