@@ -37,7 +37,9 @@ var driver_options = {
     'sasl.username': 'token',
   'sasl.password': eventStreamsCredentials.api_key,
   'broker.version.fallback': '0.10.0',  // still needed with librdkafka 0.11.6 to avoid fallback to 0.9.0
+  'enable.ssl.certificate.verification': 'false',
   'log.connection.close': false,
+  
 };
 var consumer_opts = {
   'client.id': 'pubsub-consumer',
