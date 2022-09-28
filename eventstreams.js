@@ -27,8 +27,8 @@ if (process.platform === "darwin") {
 
 // Config options common to all clients
 var driver_options = {
-  //'metadata.broker.list': eventStreamsCredentials.kafka_brokers_sasl.join(','),
-  'metadata.broker.list': eventStreamsCredentials.kafka_http_url,
+  'metadata.broker.list': eventStreamsCredentials.kafka_brokers_sasl.join(','),
+  //'metadata.broker.list': eventStreamsCredentials.kafka_http_url,
   'security.protocol': 'sasl_ssl',
   //'security.protocol': 'plaintext',
   //'security.protocol': 'sasl_plaintext',
