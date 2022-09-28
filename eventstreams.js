@@ -28,17 +28,14 @@ if (process.platform === "darwin") {
 // Config options common to all clients
 var driver_options = {
   'metadata.broker.list': eventStreamsCredentials.kafka_brokers_sasl.join(','),
-  //'metadata.broker.list': eventStreamsCredentials.kafka_http_url,
   'security.protocol': 'sasl_ssl',
-  //'security.protocol': 'plaintext',
-  //'security.protocol': 'sasl_plaintext',
   'ssl.ca.location': process.env.CA_LOCATION || ca_location,
   'sasl.mechanisms': 'PLAIN',
     'sasl.username': 'token',
   'sasl.password': eventStreamsCredentials.api_key,
   'broker.version.fallback': '0.10.0',  // still needed with librdkafka 0.11.6 to avoid fallback to 0.9.0
   'enable.ssl.certificate.verification': 'false',
-  'log.connection.close': false,
+  'log.connection.close': false
   
 };
 var consumer_opts = {
